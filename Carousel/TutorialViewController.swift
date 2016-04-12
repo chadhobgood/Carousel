@@ -12,7 +12,8 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
-    @IBOutlet weak var backupButton: UIImageView!
+    @IBOutlet weak var backupButton: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,8 @@ class TutorialViewController: UIViewController, UIScrollViewDelegate {
         
         scrollView.contentSize = CGSize(width: 1280, height: 568)
         scrollView.delegate = self
+        
+        backupButton.alpha = 0
         
         // Set in the UI
         /*
